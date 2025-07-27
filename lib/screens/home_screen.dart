@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   final String title;
-  const HomeScreen({super.key, required this.title});
+  final Color textColor;
+  const HomeScreen({super.key, required this.title, required this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Text(
           'Welcome to the Home Screen!',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 24, color: textColor),
         ),
       ),
     );

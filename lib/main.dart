@@ -17,7 +17,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter Demo Home Page'),
         ),
-        body: HomeScreen(title: "Home screen parameter",),
+        body: HomeScreen(title: "Home screen parameter", onPressed: () {
+          print("Button pressed!");
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Button was pressed!')),
+          );
+        },),
       ),
     );
   }
